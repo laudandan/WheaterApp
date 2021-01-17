@@ -16,15 +16,29 @@ import java.net.URL;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Clasa Main are functionalitatea de a porni programul si de a citi
+ * din fisier orasele cu Id-ul acestora.
+ * @author Laudan Daniel
+ */
 public class Main extends Application {
 
     private ObservableList<City> myList= FXCollections.observableArrayList();
+
 
     public static void main(String[] args)
     {
         launch(args);
     }
 
+    public ObservableList<City> getMyList() {
+        return myList;
+    }
+
+    /**
+     * read_file citeste tot fisierul de initializare si adauga in lista de orase toate orasele.
+     * @param path calea definita catre fisierul de configurare al oraselor.
+     */
     public void read_file(String path){
        try {
            File fileOrase=new File(path);
@@ -45,6 +59,11 @@ public class Main extends Application {
        }
     }
 
+    /**
+     *
+     * @param primaryStage definieste un container top level ce contine toate obiectele necesare interfetei
+     *                     grafice
+     */
     public void start(Stage primaryStage) {
         FXMLLoader loader = new FXMLLoader();
 
