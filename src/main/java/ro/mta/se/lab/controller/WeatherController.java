@@ -35,7 +35,7 @@ public class WeatherController implements Initializable {
     private String currentId=null;
     String testMock;
 
-    public void setCurrentId(String currentId) {
+    public final void setCurrentId(String currentId) {
         this.currentId = currentId;
     }
 
