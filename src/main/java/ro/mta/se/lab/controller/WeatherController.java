@@ -8,14 +8,11 @@ import javafx.scene.control.*;
 
 import ro.mta.se.lab.model.City;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.List;
 import java.util.ResourceBundle;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -34,10 +31,6 @@ public class WeatherController implements Initializable {
 
     private String currentId=null;
     String testMock;
-
-    public void setCurrentId(String currentId) {
-        this.currentId = currentId;
-    }
 
 
     /**
