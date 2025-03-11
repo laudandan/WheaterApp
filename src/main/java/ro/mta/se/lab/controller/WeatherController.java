@@ -35,7 +35,7 @@ public class WeatherController implements Initializable {
     private String currentId=null;
     String testMock;
 
-    public void setCurrentId(String currentId) {
+    public final void setCurrentId(String currentId) {
         this.currentId = currentId;
     }
 
@@ -44,8 +44,9 @@ public class WeatherController implements Initializable {
      *
      * @param cityList contine lista de orase initializata in Main.
      */
-    public WeatherController(ObservableList<City> cityList){
-        this.cityList=cityList;
+    public WeatherController(ObservableList<City> cityList) {
+        super();
+        this.cityList = cityList;
     }
 
 
