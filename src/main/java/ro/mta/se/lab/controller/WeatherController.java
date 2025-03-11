@@ -28,7 +28,7 @@ import org.json.simple.parser.ParseException;
  */
 public class WeatherController implements Initializable {
 
-    private ObservableList<City> cityList= FXCollections.observableArrayList();
+    private ObservableList<City> cityList;
     private ObservableList<String> country= FXCollections.observableArrayList();
     private ObservableList<String> id_country= FXCollections.observableArrayList();
 
